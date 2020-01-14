@@ -1,9 +1,31 @@
-let count = 0; 
+let count = 1; 
+let player = "X";
 
+function switchPlayer() {
+    if (count === 1) {
+        
+    }
 
+}
 
+function horizontalWin() {
 
+}
 
+function verticalWin() {
+
+}
+
+function diagonalWin() {
+
+}
+
+function performLogic() {
+    count++;
+        if (count > 8) {
+            gameOver();
+        }
+}
 
 
 $("#button1").click(function() {
