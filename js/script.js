@@ -1,12 +1,29 @@
-let count = 1; 
+let count = 0; 
 let player = "X";
 
-function switchPlayer() {
-    if (count === 1) {
-        
+function player1ToPlayer2() {
+    if (player === "X") {
+        player = "O";
+    } else {
+        player = "X";
     }
+};
 
+function appendToTile(button, tile) {
+    $(tile).append(player)
 }
+
+
+// function switchPlayer() {
+//     if (count === 0) {
+//         $("button").append("X")
+//         count = 1;
+//     }
+//     if (count === 1) {
+//         $("button").append("O");
+//         count = 0;
+//     }
+// }
 
 function horizontalWin() {
 
@@ -22,9 +39,15 @@ function diagonalWin() {
 
 function performLogic() {
     count++;
+    player1ToPlayer2();
+    appendToTile();
+
+
+
         if (count > 8) {
             gameOver();
         }
+    
 }
 
 
